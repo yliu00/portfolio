@@ -3435,9 +3435,9 @@ input, select, textarea {
 		}
 
 
-  /* Resume Header */
+  /* Modal Header */
 
-  #resume-header {
+  #modal-header {
 	background-attachment: scroll,							scroll,					fixed;
 	background-image: url("images/top-3200.svg"), url("images/overlay.png"), url("../../images/header.jpg");
 	background-position: bottom center,					top left,				center center;
@@ -3449,7 +3449,7 @@ input, select, textarea {
 	text-align: center;
 }
 
-	#resume-header:before, #resume-header:after {
+	#modal-header:before, #modal-header:after {
 		background: rgba(224, 224, 224, 0.75);
 		content: '';
 		left: 50%;
@@ -3458,44 +3458,44 @@ input, select, textarea {
 		z-index: 0;
 	}
 
-	#resume-header:before {
+	#modal-header:before {
 		height: calc(100% - 50px);
 		opacity: 0.15;
 		top: 0;
 	}
 
-	#resume-header:after {
+	#modal-header:after {
 		bottom: 0;
 		height: 50px;
 	}
 
-	#resume-header a {
+	#modal-header a {
 		border-bottom-color: rgba(255, 255, 255, 0.35);
 		color: rgba(255, 255, 255, 0.8);
 	}
 
-		#resume-header a:hover {
+		#modal-header a:hover {
 			border-bottom-color: transparent;
 			color: #4eb980;
 		}
 
-	#resume-header strong, #resume-header b {
+	#modal-header strong, #modal-header b {
 		color: #ffffff;
 	}
 
-	#resume-header h1, #resume-header h2, #resume-header h3, #resume-header h4, #resume-header h5, #resume-header h6 {
+	#modal-header h1, #modal-header h2, #modal-header h3, #modal-header h4, #modal-header h5, #modal-header h6 {
 		color: #ffffff;
 	}
 
-	#resume-header input[type="submit"],
-	#resume-header input[type="reset"],
-	#resume-header input[type="button"],
-	#resume-header .button {
+	#modal-header input[type="submit"],
+	#modal-header input[type="reset"],
+	#modal-header input[type="button"],
+	#modal-header .button {
 		background: #ffffff;
 		color: #544d55;
 	}
 
-	#resume-header .logo {
+	#modal-header .logo {
 		background: #4eb980;
 		border-radius: 100%;
 		color: #ffffff;
@@ -3509,26 +3509,26 @@ input, select, textarea {
 		width: 2.35em;
 	}
 
-		#resume-header .logo.fa-paper-plane-o:before {
+		#modal-header .logo.fa-paper-plane-o:before {
 			left: -0.075em;
 			position: relative;
 		}
 
-	#resume-header h1 {
+	#modal-header h1 {
 		font-size: 2.5em;
 		margin: 0;
 	}
 
-	#resume-header p {
+	#modal-header p {
 		font-size: 1.5em;
 		line-height: 1.5em;
 		margin: 0.25em 0 0 0;
 	}
 
 
-	/* Resume Footer */
+	/* Modal Footer */
 
-#resume-footer {
+#modal-footer {
 	background-attachment: scroll;
 	background-color: #4eb980;
 	background-image: url("images/bottom-3200.svg");
@@ -3548,7 +3548,7 @@ input, select, textarea {
 	text-align: center;
 }
 
-	#resume-footer:before {
+	#modal-footer:before {
 		background: rgba(224, 224, 224, 0.75);
 		content: '';
 		height: calc(460px + 6em);
@@ -3559,93 +3559,93 @@ input, select, textarea {
 		z-index: 0;
 	}
 
-	#resume-footer a {
+	#modal-footer a {
 		color: #ffffff;
 	}
 
-	#resume-footer strong, #resume-footer b {
+	#modal-footer strong, #modal-footer b {
 		color: #ffffff;
 	}
 
-	#resume-footer h1, #resume-footer h2, #resume-footer h3, #resume-footer h4, #resume-footer h5, #resume-footer h6 {
+	#modal-footer h1, #modal-footer h2, #modal-footer h3, #modal-footer h4, #modal-footer h5, #modal-footer h6 {
 		color: #ffffff;
 	}
 
-	#resume-footer header p {
+	#modal-footer header p {
 		color: rgba(255, 255, 255, 0.5);
 	}
 
-	#resume-footer input[type="submit"],
-	#resume-footer input[type="reset"],
-	#resume-footer input[type="button"],
-	#resume-footer .button {
+	#modal-footer input[type="submit"],
+	#modal-footer input[type="reset"],
+	#modal-footer input[type="button"],
+	#modal-footer .button {
 		background: #ffffff;
 		box-shadow: inset 0 0 0 1px #ffffff;
 		color: #4eb980;
 	}
 
-		#resume-footer input[type="submit"]:hover,
-		#resume-footer input[type="reset"]:hover,
-		#resume-footer input[type="button"]:hover,
-		#resume-footer .button:hover {
+		#modal-footer input[type="submit"]:hover,
+		#modal-footer input[type="reset"]:hover,
+		#modal-footer input[type="button"]:hover,
+		#modal-footer .button:hover {
 			background: rgba(224, 224, 224, 0.15);
 			color: #ffffff;
 		}
 
-	#resume-footer input[type="text"]:focus,
-	#resume-footer input[type="password"]:focus,
-	#resume-footer input[type="email"]:focus,
-	#resume-footer select:focus,
-	#resume-footer textarea:focus {
+	#modal-footer input[type="text"]:focus,
+	#modal-footer input[type="password"]:focus,
+	#modal-footer input[type="email"]:focus,
+	#modal-footer select:focus,
+	#modal-footer textarea:focus {
 		border-color: #ffffff;
 	}
 
-	#resume-footer .formerize-placeholder {
+	#modal-footer .formerize-placeholder {
 		color: rgba(255, 255, 255, 0.3) !important;
 	}
 
-	#resume-footer form {
+	#modal-footer form {
 		margin: 3em 0;
 	}
 
-	#resume-footer .copyright {
+	#modal-footer .copyright {
 		color: rgba(255, 255, 255, 0.5);
 		font-size: 0.8em;
 		line-height: 1em;
 		margin: 3em 0 0 0;
 	}
 
-		#resume-footer .copyright li {
+		#modal-footer .copyright li {
 			border-left: dotted 1px;
 			display: inline-block;
 			margin-left: 1em;
 			padding-left: 1em;
 		}
 
-			#resume-footer .copyright li:first-child {
+			#modal-footer .copyright li:first-child {
 				padding: 0;
 				margin: 0;
 				border: 0;
 			}
 
-			#resume-footer .copyright li a, #resume-footer .copyright li span {
+			#modal-footer .copyright li a, #modal-footer .copyright li span {
 				color: inherit;
 			}
 
-				#resume-footer .copyright li a:hover, #resume-footer .copyright li span:hover {
+				#modal-footer .copyright li a:hover, #modal-footer .copyright li span:hover {
 					color: #ffffff;
 				}
 
 
-	/* Main */
+	/* Modal Main */
 
-#resume-main {
+#modal-main {
 	padding: 6em 0 5em 0;
 	position: relative;
 	z-index: 1;
 }
 
-	#resume-main:before {
+	#modal-main:before {
 		background: rgba(224, 224, 224, 0.75);
 		content: '';
 		height: 100%;
@@ -3656,8 +3656,8 @@ input, select, textarea {
 		z-index: -1;
 	}
 
-	#resume-main header.major,
-	#resume-main footer.major {
+	#modal-main header.major,
+	#modal-main footer.major {
 		background: #ffffff;
 	}
 

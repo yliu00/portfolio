@@ -3352,8 +3352,8 @@ input, select, textarea {
 		border-color: rgba(224, 224, 224, 0.75);
 		border-style: solid;
 		border-top-width: 1px;
-		margin-bottom: 2em; /* CHANGED from 6em */
-		padding: 4em 0;
+		margin-bottom: 0em; /* CHANGED from 6em */
+		padding: 2em 0; /* CHANGED from 4em 0 */
 		position: relative;
 	}
 
@@ -3445,7 +3445,7 @@ input, select, textarea {
 	background-repeat: repeat-x,						repeat,					no-repeat;
 	background-size: 3200px 460px,					auto,					cover;
 	color: rgba(255, 255, 255, 0.8);
-	padding: 10em 0 20em 0;
+	padding: 3em 0 10em 0; /* CHANGED from 10em 0 20em 0; */
 	position: relative;
 	text-align: center;
 }
@@ -3641,7 +3641,7 @@ input, select, textarea {
 	/* Modal Main */
 
 #modal-main {
-	padding: 6em 0 5em 0;
+	padding: 3em 0 2em 0; /* CHANGED from 6em 0 5em 0; */
 	position: relative;
 	z-index: 1;
 }

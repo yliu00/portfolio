@@ -1,2 +1,2 @@
 # portfolio
- Journalism Portfolio
+ Yichen Liu's Journalism Portfolio

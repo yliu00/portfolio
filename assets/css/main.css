@@ -3412,8 +3412,8 @@ input, select, textarea {
 		border-color: rgba(224, 224, 224, 0.75);
 		border-style: solid;
 		border-top-width: 1px;
-		margin-top: 6em;
-		padding: 4em 0;
+		margin-top: 2em;
+		padding: 3em 0 2em 0;
 		position: relative;
 	}
 
@@ -3445,7 +3445,7 @@ input, select, textarea {
 	background-repeat: repeat-x,						repeat,					no-repeat;
 	background-size: 3200px 460px,					auto,					cover;
 	color: rgba(255, 255, 255, 0.8);
-	padding: 3em 0 10em 0; /* CHANGED from 10em 0 20em 0; */
+	padding: 3em 0 12em 0; /* CHANGED from 10em 0 20em 0; */
 	position: relative;
 	text-align: center;
 }
@@ -3544,7 +3544,7 @@ input, select, textarea {
 		*/
 
 	margin-top: -260px;
-	padding: calc(460px + 6em) 0 10em 0;
+	padding: calc(460px + 4em) 0 2em 0;
 	position: relative;
 	text-align: center;
 }
@@ -3552,7 +3552,7 @@ input, select, textarea {
 	#modal-footer:before {
 		background: rgba(224, 224, 224, 0.75);
 		content: '';
-		height: calc(460px + 6em);
+		height: calc(460px + 4em);
 		left: 50%;
 		position: absolute;
 		top: 0;
@@ -3706,9 +3706,7 @@ input, select, textarea {
 
 		.feature .content {
 			display: inline-block;
-			padding: 3.5em;
-			padding-top: 1em; /* CHANGED added */
-			padding-bottom: 1em; /* CHANGED added */
+			padding: 0.5em 2em;
 			vertical-align: middle;
 			width: 48; /* 150% ? */
 		}

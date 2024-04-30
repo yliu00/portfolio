@@ -692,11 +692,11 @@ input, select, textarea {
 		display: flex;
 		cursor: default;
 		list-style: none;
-		padding-left: 0;		
 		justify-content: center;
 		width: 100%;
-		margin-left: 0;
 		margin: 1.5em;
+		padding-left: 0;
+		margin-left: 0;
 	}
 
 		ul.actions li {

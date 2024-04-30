@@ -3249,12 +3249,12 @@ input, select, textarea {
 	margin: auto;
 	padding: 20px;
 	border: 1px solid #888;
-	width: 80%;
+	width: 75%; /* CHANGED from 80% */
   }
 
   /* Modal Box */
-
 	
+  
   .modal-content .box {
 		background: #ffffff;
 		border: solid 1px rgba(224, 224, 224, 0.75);
@@ -3315,17 +3315,38 @@ input, select, textarea {
 			
 			@media screen and (max-width: 736px) {
 			
-			.modal-content .container {
-				width: 90% !important;
-			}
+				.modal-content { /* CHANGED added */
+					padding: 10px;
+					width: 100%;
+				}
+				.modal { /* CHANGED added */
+					padding-top: 0;
+				}
+				.feature.right .content { /* CHANGED added */
+					margin-left: 0% !important;
+				}
+
+				.modal-content .container {
+					width: 90% !important;
+				}
 			
 			}
 			
 			@media screen and (max-width: 480px) {
+				.modal-content { /* CHANGED added */
+					padding: 10px;
+					width: 100%;
+				}
+				.modal { /* CHANGED added */
+					padding-top: 0;
+				}
+				.feature.right .content { /* CHANGED added */
+					margin-left: 0% !important;
+				}
 			
-			.modal-content .container {
-				width: 100% !important;
-			}
+				.modal-content .container {
+					width: 100% !important;
+				}
 			
 			}
 

@@ -2685,7 +2685,7 @@ input, select, textarea {
 	#main {
 		margin-left: 35%;
 		max-width: 54em;
-		padding: 8em 4em 4em 4em;
+		padding: 2em 4em 4em 4em;
 		width: calc(100% - 35%);
 	}
 
@@ -2695,7 +2695,7 @@ input, select, textarea {
 			padding: 4em 0 0 0;
 		}
 
-			#main > section:first-child {
+			#main > section:first-of-type {
 				border-top: 0;
 				margin-top: 0;
 				padding-top: 0;
@@ -3788,3 +3788,66 @@ input, select, textarea {
 		.feature.long .content {
 			padding-top: 0;
 		}
+
+/* Custom navigation bar */
+.custom-nav {
+  list-style-type: none;
+  margin: 0; /*0 0 2em 0;*/
+  padding: 0 0 4em 0;
+  overflow: hidden;
+  background-color: #fff;
+  font-family: inherit;
+}
+.custom-nav li {
+  float: left;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.custom-nav li:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 24px;
+  background: #452d41;
+  margin: 0 8px;
+}
+
+.custom-nav li:last-child {
+  border-right: none;
+}
+
+.custom-nav li a {
+  display: block;
+  color: #452d41;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: background 0.2s, color 0.2s;
+  border-bottom: none;
+  
+}
+
+.custom-nav .active, .custom-nav li a.active {
+  background-color: #452d41;
+  color: #fff;
+  border-radius: 8px 8px 8px 8px;
+}
+
+@media (max-width: 700px) {
+  .custom-nav {
+    flex-direction: column;
+  }
+  .custom-nav li {
+    width: 100%;
+  }
+  .custom-nav li:not(:last-child)::after {
+    display: none;
+  }
+  .custom-nav li a {
+    padding: 12px 0;
+  }
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yichen Liu | Portfolio</title>
+  <style>body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  background: #101820;
+  color: #fff;
+}
+
+.contact a {
+  margin: 0 1rem;
+  color: #fdd835;
+  text-decoration: none;
+}
+
+section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  border-left: 5px solid #fdd835;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+  height: 3rem;
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+.achievement {
+  min-width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-500%); }
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.project {
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline li {
+  margin: 0.5rem 0;
+  border-left: 3px solid #333;
+  padding-left: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #101820;
+  color: #fff;
+}
+</style>
+</head>
+<body>
+  <section id="achievements">
+    <h2>🏅 Achievements</h2>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="achievement">Poker Finalist @ UChicago Trading Competition</div>
+        <div class="achievement">1st Place @ Hack the Herd</div>
+        <div class="achievement">2nd Place @ Amherst Quant Competition (Algo + Manual Trading)</div>
+        <div class="achievement">Best Use of External Data @ DataFest</div>
+        <div class="achievement">US Presidential Scholar Candidate</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>🛠 Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <h3>5 College Rideshare</h3>
+        <p>Flutter & Firebase app serving 50k students</p>
+      </div>
+      <div class="project">
+        <h3>Lost & Found</h3>
+        <p>AI-powered Django web app to reunite lost items with owners</p>
+      </div>
+      <div class="project">
+        <h3>ResuMax</h3>
+        <p>Django + RAG resume generator for career optimization</p>
+      </div>
+      <div class="project">
+        <h3>Tread Shed Digitization</h3>
+        <p>Digital transformation tool for campus resource</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>📈 Experience</h2>
+    <ul class="timeline">
+      <li><strong>Sila Capital</strong> – Tech Investment Intern (2025)</li>
+      <li><strong>Indiana Univ. School of Medicine</strong> – Research Intern (2022–23)</li>
+      <li><strong>Acumen Magazine</strong> – Editor-in-Chief (2023–24)</li>
+      <li><strong>Digital Health Club</strong> – President (2023–24)</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>🧠 Skills & Interests</h2>
+    <p><strong>Languages:</strong> Python, Java, C++, JS, HTML/CSS</p>
+    <p><strong>Tools:</strong> Git, Adobe Suite, WordPress</p>
+    <p><strong>Other:</strong> Badminton, Choir, Hiking, Dragon Dance</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Yichen Liu</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yichen Liu | Portfolio</title>
+	<link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    section {
+  padding: 2rem;
+  max-width: 80%;
+  margin: auto;
+}
+
+h2 {
+  border-left: 5px solid #452d41;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+  height: 3rem;
+  background: #f0e6ec; /* light maroonish tint */
+  border-left: 4px solid #452d41;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+.achievement {
+  min-width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-500%); }
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  box-sizing: content-box;
+}
+
+.project {
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline li {
+  margin: 1rem 0;
+  border-left: 3px solid #333;
+  padding-left: 1rem;
+}
+
+.accordion-toggle {
+  background-color: #452d41;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.75rem 1rem;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.accordion-toggle:hover {
+  background-color: #3b243c;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #f6f0f4; /* subtle maroon background */
+  padding: 0 1rem;
+  border-left: 4px solid #452d41;
+  border-radius: 0 0 5px 5px;
+}
+
+.accordion-content.open {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  max-height: 500px;
+}
+
+.honors-list {
+  list-style: disc inside;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <section id="education">
+    <h2>🎓 Education</h2>
+    <p><strong>Amherst College</strong> – B.A. in Computer Science & Physics (Class of 2028), GPA: 3.97/4.00</p>
+    <p><strong>Coursework:</strong> Data Structures, Automated Reasoning, Multivariable Calculus, Linear Algebra, Honors Electromagnetism</p>
+    <p><strong>On-Campus Roles:</strong> Research Assistant at ACNLP Lab, Senior Engineer at i2i Venture Accelerator, Teaching Assistant for Data Structures, Alto in Choral Society, Clubs & Organizations Lead for Olio Yearbook</p>
+    <p><strong>Programs:</strong> Goldman Sachs Engineering Possibilities Summit, APS Conference at Fermilab</p>
+  </section>
+
+  <section id="achievements">
+    <h2>🏅 Achievements</h2>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="achievement">Poker Finalist @ UChicago Trading Competition</div>
+        <div class="achievement">1st Place @ Hack the Herd</div>
+        <div class="achievement">2nd Place @ Amherst Quant Competition</div>
+        <div class="achievement">Best Use of External Data @ DataFest</div>
+        <div class="achievement">US Presidential Scholar Candidate</div>
+      </div>
+    </div>
+    <button class="accordion-toggle">🎓 Show Pre-College Honors</button>
+    <div class="accordion-content">
+      <ul class="honors-list">
+        <li>National Merit Finalist (2023)</li>
+        <li>US Presidential Scholar Program Candidate (2024)</li>
+        <li>Top 17% Internationally – USA Computing Olympiad (2021)</li>
+        <li>US National Chemistry Olympiad Honorable Mention (2023)</li>
+        <li>Top Scholar at CHS (2022–24)</li>
+        <li>Robotics Programming & Electrical All-Star (2022)</li>
+        <li>SAT: 1590/1600</li>
+        <li>GPA: 4.63/4.00</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>🛠 Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <h3>5 College Rideshare</h3>
+        <p>Developed a Flutter & Firebase-based app to connect ~50k local students with drivers. Achieved 90+ downloads in first month. Released on Android and iOS.</p>
+        <a href="https://apps.apple.com/us/app/5-college-rideshare/id6742161356" target="_blank" class="apple-link">
+          <i class="fab fa-apple"></i> App Store
+        </a>
+        <br />
+        <i><i class="fab fa-github"></i> GitHub available upon request</i>
+      </div>
+      <div class="project">
+        <h3>Lost & Found</h3>
+        <p>Django web app with AI-powered image recognition to match lost items to owners and improve sustainability. Built during Hack the Herd, winning 1st place.</p>
+        <a href="https://github.com/ac-i2i-engineering/LostandFound" target="_blank" class="github-link">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+      <div class="project">
+        <h3>ResuMax</h3>
+        <p>Resume creation/review platform powered by RAG (retrieval augmented generation). Designed for Amherst College students using official career center guidelines.</p>
+        <a href="https://github.com/ac-i2i-engineering/resumax" target="_blank" class="github-link">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+      <div class="project">
+        <h3>Tread Shed Digitization</h3>
+        <p>Led efforts to digitize and structure physical resource data. Built Django app to increase usability and efficiency.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>📈 Experience</h2>
+    <ul class="timeline">
+      <li>
+        <strong>Sila Capital</strong> – Technical Investment Analyst Intern (2025)<br/>
+        Developed automated research pipelines with cloud-based scraping, improving internal efficiency. Initiated a new real estate investment.
+      </li>
+      <li>
+        <strong>Indiana University School of Medicine</strong> – Research Intern (2022–2023)<br/>
+        Co-authored peer-reviewed <a href="https://doi.org/10.3390/genes14101871">paper</a> (6 citations). Built custom software to assess osteogenic differentiation levels. Performed wet/dry lab work.
+      </li>
+      <li>
+        <strong>Acumen Magazine</strong> – Editor-in-Chief (2023–2024)<br/>
+        Led 60+ staff in publishing themed ~25-page issues. Coded site features and incorporated multimedia elements. Won state/national awards.
+      </li>
+      <li>
+        <strong>Digital Health Club</strong> – President (2023–2024)<br/>
+        Conducted health data analysis (1.5GB+) using Python/R. Raised community awareness of key health issues. Club sponsored by Eli Lilly.
+      </li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>🧠 Skills & Interests</h2>
+    <p><strong>Languages:</strong> Python, Java, C++, JS, HTML/CSS</p>
+    <p><strong>Tools:</strong> Git, Adobe Suite, WordPress, Microsoft Office</p>
+    <p><strong>Languages Spoken:</strong> English (Fluent), Chinese (Native), French (Intermediate)</p>
+    <p><strong>Other Interests:</strong> Badminton, Choir, Graphic Design, Hiking, Dragon Dance, Plain Text Accounting</p>
+  </section>
+<script>
+  const toggleBtn = document.querySelector('.accordion-toggle');
+  const content = document.querySelector('.accordion-content');
+
+  toggleBtn.addEventListener('click', () => {
+    content.classList.toggle('open');
+    toggleBtn.textContent = content.classList.contains('open')
+      ? '🎓 Hide Pre-College Honors'
+      : '🎓 Show Pre-College Honors';
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terminal Resume | Yichen Liu</title>
+  <style>
+    section#terminal-section {
+      background: #111;
+      color: #fefefe;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 2rem;
+      margin: 2rem auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #8c6d7a;
+    }
+
+    .terminal {
+      background: #111;
+      padding: 1.5rem;
+      border-radius: 10px;
+      white-space: pre-wrap;
+    }
+
+    .input-line {
+      display: flex;
+    }
+
+    .prompt {
+      color: #8c6d7a;
+      margin-right: 0.5rem;
+    }
+
+    .user-input {
+      background: none;
+      border: none;
+      color: #ffffff;
+      font: inherit;
+      outline: none;
+      flex: 1;
+    }
+
+    .output {
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <section id="terminal-section">
+    <div class="terminal" id="terminal">
+      <div class="output"><i>> Initializing Yichen Liu’s profile...<br>> Secure shell loaded.</i><br>
+Type <strong>help</strong> to get started.</div>
+    </div>
+  </section>
+
+  <script>
+    const terminal = document.getElementById('terminal');
+
+    const commands = {
+      help: `Available commands:
+  - help
+  - view skills
+  - view projects
+  - view experience
+  - contact
+  - clear
+  - inspire
+  - meow`,
+
+      'view skills': `Skills:
+  - Python, Java, C++, HTML/CSS/JS
+  - Git, Firebase, Django, Flutter
+  - Adobe Suite, WordPress`,
+
+      'view projects': `Projects:
+  - 5 College Rideshare: Flutter app with Firebase
+  - Lost & Found: AI Django app for item matching
+  - ResuMax: RAG resume generator for Amherst students`,
+
+      'view experience': `Experience:
+  - Sila Capital: Tech Investment Intern
+  - IU School of Medicine: Research Intern
+  - Acumen Magazine: Editor-in-Chief
+  - Digital Health Club: President`,
+
+      contact: `Email: yiliu28@amherst.edu
+LinkedIn: linkedin.com/in/ycc0`,
+
+      clear: 'clear',
+
+      inspire: `"The best way to predict the future is to invent it." – Alan Kay` ,
+
+      meow: `
+                          ________________                                                             
+                       __/                \\_______                                                     
+                      /                           \\____                                               
+                     /                                 \\____________________                          
+                    /                                                       \\____                    
+                    |                                                            /                    
+                   /                                                           _/                      
+                __/                                                           |                       
+           ____/                                                              |                       
+       ___/    ___/|                                                         /    ~MEOW~               
+  ____/   ____/    |                                                     ___/                      
+ (_______/        /         ___          _______________       _         \\                            
+                  |      __/    /       |               \\     | \\___      \\        _____           
+                _/    __/      /       /                 \\    \\     \\__    \`——————/     \\              
+               |    /           \\    /                     \\   \\       \\_________(       )      
+               |   \\             \\   \\                      \\   \\___              \\_____/     
+                \\   \\__           \\   \\___                   \\______)                          
+                 \\_____)           \\______)                                                          
+      `,
+
+      potato: `🥔 You found the potato. This does absolutely nothing. Or does it?`
+    };
+
+    function createInputLine() {
+      const inputLine = document.createElement('div');
+      inputLine.className = 'input-line';
+
+      const prompt = document.createElement('span');
+      prompt.className = 'prompt';
+      prompt.textContent = '>';
+
+      const input = document.createElement('input');
+      input.className = 'user-input';
+      input.autofocus = true;
+
+      inputLine.appendChild(prompt);
+      inputLine.appendChild(input);
+      terminal.appendChild(inputLine);
+      input.focus();
+
+      input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+          const value = input.value.trim().toLowerCase();
+          input.disabled = true;
+
+          const output = document.createElement('div');
+          output.className = 'output';
+
+          if (value === 'clear') {
+            terminal.innerHTML = '';
+            const welcome = document.createElement('div');
+            welcome.className = 'output';
+            welcome.innerHTML = "<i>> Initializing Yichen Liu’s profile...<br>> Secure shell loaded.</i><br>\nType <strong>help</strong> to get started.";
+            terminal.appendChild(welcome);
+            createInputLine();
+            return;
+          } else {
+            output.textContent = commands[value] || `Command not found: ${value}`;
+            terminal.appendChild(output);
+          }
+
+          createInputLine();
+          terminal.scrollTop = terminal.scrollHeight;
+        }
+      });
+    }
+
+    createInputLine();
+  </script>
+</body>
+</html>

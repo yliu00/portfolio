@@ -16,7 +16,7 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/amherst-logo.jpg" alt="" style="width: 65%; float: right; padding-right: 1em;" /></a>
+					<a href="#" class="image avatar"><img src="images/amherst-logo.png" alt="" style="width: 65%; float: right; padding-right: 1em;" /></a>
 					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt=""/></a>
 					<h1><strong>I am Yichen Liu</strong>,<br />
 						Computer Science & Physics major at
@@ -31,7 +31,6 @@
 				<li><a class="active" href="#" data-page="home">Home</a></li>
 				<li><a href="#" data-page="journalism">Journalism Portfolio</a></li>
 				<li><a href="#" data-page="about">About</a></li>
-				<li><a href="#" data-page="contact">Contact</a></li>
 			</ul>
 			<div id="page-content"></div>
 	</div>
@@ -54,23 +53,30 @@
 		<!-- Scripts -->
 		 <script>
 			function loadPage(page) {
-			// Remove active class from all nav links
-			document.querySelectorAll('.custom-nav a').forEach(a => a.classList.remove('active'));
-			// Add active class to the clicked link
-			document.querySelector('.custom-nav a[data-page="' + page + '"]').classList.add('active');
-			// Fetch and load the HTML file
-			fetch(page + '.html')
-				.then(response => response.text())
-				.then(html => {
-				document.getElementById('page-content').innerHTML = html;
-				});
+				// Remove active class from all nav links
+				document.querySelectorAll('.custom-nav a').forEach(a => a.classList.remove('active'));
+				// Add active class to the clicked link
+				document.querySelector('.custom-nav a[data-page="' + page + '"]').classList.add('active');
+				// Fetch and load the HTML file
+				fetch(page + '.html')
+					.then(response => response.text())
+					.then(html => {
+						document.getElementById('page-content').innerHTML = html;
+
+						// Execute any inline scripts in the loaded HTML
+						const scripts = document.getElementById('page-content').querySelectorAll('script');
+						scripts.forEach(script => {
+							eval(script.textContent); // Evaluate the script content
+						});
+					})
+					.catch(error => console.error('Error loading page:', error));
 			}
 			// Set up nav click handlers
 			document.querySelectorAll('.custom-nav a').forEach(a => {
-			a.addEventListener('click', function(e) {
-				e.preventDefault();
-				loadPage(this.getAttribute('data-page'));
-			});
+				a.addEventListener('click', function(e) {
+					e.preventDefault();
+					loadPage(this.getAttribute('data-page'));
+				});
 			});
 			// Load home page by default
 			loadPage('home');

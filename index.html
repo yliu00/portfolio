@@ -81,52 +81,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
-			<script>
-				// Get the modal
-				var resume = document.getElementById("modal-resume");
-				var standards = document.getElementById("modal-standards");
-				var portfolio = document.getElementById("modal-portfolio");
-				
-				// Get the button that opens the modal
-				var btnR1 = document.getElementById("btn-resume");
-				var btnR2 = document.getElementById("btn-resume-back");
-				var btnS1 = document.getElementById("btn-standards");
-				var btnS2 = document.getElementById("btn-standards-back");
-				var btnP1 = document.getElementById("btn-portfolio");
-				var btnP2 = document.getElementById("btn-portfolio-back");
-				
-				// When the user clicks the button, open the modal 
-				btnR1.onclick = function() {
-					resume.style.display = "block";
-				}
-				btnR2.onclick = function() {
-					resume.style.display = "none";
-				}
-				btnS1.onclick = function() {
-					standards.style.display = "block";
-				}
-				btnS2.onclick = function() {
-					standards.style.display = "none";
-				}
-				btnP1.onclick = function() {
-					portfolio.style.display = "block";
-				}
-				btnP2.onclick = function() {
-					portfolio.style.display = "none";
-				}
-				
-				// When the user clicks anywhere outside of the modal, close it
-				window.onclick = function(event) {
-				  if (event.target == resume) {
-					resume.style.display = "none";
-				  } else if (event.target == standards) {
-					standards.style.display = "none";
-				  } else if (event.target == portfolio) {
-					portfolio.style.display = "none";
-				  }
-				}
-				</script>
 				
 	</body>
 </html>

@@ -7,14 +7,6 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body>
-
-		<!-- Navigation -->
-		<ul class="custom-nav">
-			<li><a class="active" href="#" data-page="home">Home</a></li>
-			<li><a href="#" data-page="journalism">Journalism Portfolio</a></li>
-			<li><a href="#" data-page="about">About</a></li>
-			<li><a href="#" data-page="contact">Contact</a></li>
-		</ul>
         
         <h1><strong>I am Yichen Liu</strong>,<br />
 						<a href="https://carmelacumen.org/">Acumen</a> Editor-in-Chief<br />
@@ -317,25 +309,58 @@
 							</article>
 						</div>
 					</section>
+					
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-				<!-- Three -->
-					<section id="three">
-						<h2>Get In Touch</h2>
-						<!--<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>-->
-						<div class="row">
-							<div class="col-4 col-12-small">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-										<a href="mailto:yliu2k@gmail.com">yliu2k@gmail.com</a>
-									</li>
-									<li>
-										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-										(410) 469-1520
-									</li>
-								</ul>
-							</div>
-						</div>
-					</section>
+			<script>
+				// Get the modal
+				var resume = document.getElementById("modal-resume");
+				var standards = document.getElementById("modal-standards");
+				var portfolio = document.getElementById("modal-portfolio");
+				
+				// Get the button that opens the modal
+				var btnR1 = document.getElementById("btn-resume");
+				var btnR2 = document.getElementById("btn-resume-back");
+				var btnS1 = document.getElementById("btn-standards");
+				var btnS2 = document.getElementById("btn-standards-back");
+				var btnP1 = document.getElementById("btn-portfolio");
+				var btnP2 = document.getElementById("btn-portfolio-back");
+				
+				// When the user clicks the button, open the modal 
+				btnR1.onclick = function() {
+					resume.style.display = "block";
+				}
+				btnR2.onclick = function() {
+					resume.style.display = "none";
+				}
+				btnS1.onclick = function() {
+					standards.style.display = "block";
+				}
+				btnS2.onclick = function() {
+					standards.style.display = "none";
+				}
+				btnP1.onclick = function() {
+					portfolio.style.display = "block";
+				}
+				btnP2.onclick = function() {
+					portfolio.style.display = "none";
+				}
+				
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function(event) {
+				  if (event.target == resume) {
+					resume.style.display = "none";
+				  } else if (event.target == standards) {
+					standards.style.display = "none";
+				  } else if (event.target == portfolio) {
+					portfolio.style.display = "none";
+				  }
+				}
+				</script>
 </body>
 </html>
